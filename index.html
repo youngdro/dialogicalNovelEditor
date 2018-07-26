@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>对话体小说</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div style="display:none;">
+        <img src="http://wap.cmread.com/rbc/p/content/repository/ues/image/s109/image01.png">
+        <img src="http://wap.cmread.com/rbc/p/content/repository/ues/image/s109/image02.png">
+        <img src="http://wap.cmread.com/rbc/p/content/repository/ues/image/s109/image03.png">
+        <img src="http://wap.cmread.com/rbc/p/content/repository/ues/image/s109/image04.png">
+        <img src="http://wap.cmread.com/rbc/p/content/repository/ues/image/s109/image05.png">
+        <img src="http://wap.cmread.com/rbc/p/content/repository/ues/image/s109/image06.png">
+        <img src="http://wap.cmread.com/rbc/p/content/repository/ues/image/s109/image07.png">
+        <img src="http://wap.cmread.com/rbc/p/content/repository/ues/image/s109/image08.png">
+        <img src="http://wap.cmread.com/rbc/p/content/repository/ues/image/s109/symbols_wl.png?time=102545621">
+        <img src="http://wap.cmread.com/rbc/p/content/repository/ues/image/s109/symbols_lrc.png?time=102545621">
+        <img src="http://wap.cmread.com/rbc/p/content/repository/ues/image/s109/symbols_lll.png?time=102545621">
+        <img src="http://wap.cmread.com/rbc/p/content/repository/ues/image/s109/symbols_cc.png?time=102545621">
+        <img src="http://wap.cmread.com/rbc/p/content/repository/ues/image/s109/symbols_bb.png?time=102545621">
+        <img src="http://wap.cmread.com/rbc/p/content/repository/ues/image/s109/symbols_xj.png?time=102545621">
+        <img src="http://wap.cmread.com/rbc/p/content/repository/ues/image/s109/symbols_lr1.png?time=102545621">
+        <img src="http://wap.cmread.com/rbc/p/content/repository/ues/image/s109/symbols_lr2.png?time=102545621">
+        <audio preload="auto" class="audio" hidden="true">
+            <source src="http://211.140.7.173:8081/t/lyf/cry.mp3" type="audio/mpeg">
+        </audio>
+        <audio preload="auto" class="audio" hidden="true">
+            <source src="http://211.140.7.173:8081/t/lyf/pa.mp3" type="audio/mpeg">
+        </audio>
+        <audio preload="auto" class="audio" hidden="true">
+            <source src="http://211.140.7.173:8081/t/lyf/dida.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <div class="container">
+        <div class="add-container box">
+            <div class="menu-bar">
+                <a href="#source_add_box" class="active">素材添加</a>
+                <a href="#content_add_box">内容添加</a>
+                <a href="#source_manage_box">素材管理</a>
+            </div>
+            <div class="notify"></div>
+            <i id="show_result" class="fa fa-download"></i>
+            <!-- 素材添加 -->
+            <div class="add-box">
+                <div class="source-add-box">
+                    <div class="source-item">
+                        <input type="text" name="source_type" value="character" class="hidden">
+                        <div class="item-type"><i class="fa fa-user"></i></div>
+                        <div class="source-detail">
+                            <div class="detail-item">
+                                <label for="character_name">角色名字</label>
+                                <input type="text" value="" name="characterName" id="character_name">
+                            </div>
+                            <div class="detail-item">
+                                <label for="character_level">角色地位</label>
+                                <select name="character_level" id="character_level">
+                                    <option value="b1">男一</option>
+                                    <option value="b2">男二</option>
+                                    <option value="g1">女一</option>
+                                    <option value="g2">女二</option>
+                                    <option value="" selected="selected">路人</option>
+                                </select>
+                            </div>
+                            <div class="detail-item">
+                                <label for="character_photo">头像路径</label>
+                                <input type="text" value="" name="character_photo" id="character_photo">
+                            </div>
+                            <button class="add-btn">添加</button>
+                        </div>
+                    </div>
+                    <div class="source-item">
+                        <input type="text" name="source_type" value="music" class="hidden">
+                        <div class="item-type"><i class="fa fa-music"></i></div>
+                        <div class="source-detail">
+                            <div class="detail-item">
+                                <label for="music_name">音效名称</label>
+                                <input type="text" value="" name="music_name" id="music_name">
+                            </div>
+                            <div class="detail-item">
+                                <label for="music_src">音效路径</label>
+                                <input type="text" value="" name="music_src" id="music_src">
+                            </div>
+                            <button class="add-btn">添加</button>
+                        </div>
+                    </div>
+                    <div class="source-item">
+                        <input type="text" name="source_type" value="image" class="hidden">
+                        <div class="item-type"><i class="fa fa-picture-o"></i></div>
+                        <div class="source-detail">
+                            <div class="detail-item">
+                                <label for="image_name">图片名称</label>
+                                <input type="text" value="" name="image_name" id="image_name">
+                            </div>
+                            <div class="detail-item">
+                                <label for="image_src">图片路径</label>
+                                <input type="text" value="" name="image_src" id="image_src">
+                            </div>
+                            <button class="add-btn">添加</button>
+                        </div>
+                    </div>
+                    <div class="source-item">
+                        <input type="text" name="source_type" value="musicGroup" class="hidden">
+                        <div class="item-type"><i class="fa fa-music"></i></div>
+                        <div class="source-detail">
+                            <div class="detail-item">
+                                <label for="music_srcs">音效集合</label>
+                                <input type="text" value="" name="music_srcs" id="music_srcs">
+                            </div>
+                            <button class="add-btn">批量添加</button>
+                        </div>
+                    </div>
+                    <div class="source-item">
+                        <input type="text" name="source_type" value="imageGroup" class="hidden">
+                        <div class="item-type"><i class="fa fa-picture-o"></i></div>
+                        <div class="source-detail">
+                            <div class="detail-item">
+                                <label for="image_srcs">图片集合</label>
+                                <input type="text" value="" name="image_srcs" id="image_srcs">
+                            </div>
+                            <button class="add-btn">批量添加</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 内容添加 -->
+                <div class="content-add-box">
+                    <div class="content-source-box content-character-box"></div>
+                    <div class="content-source-box content-music-box"></div>
+                    <div class="content-source-box content-image-box"></div>
+                    <div class="content-add">
+                        <div class="bookid-add-item content-add-item">
+                            <div class="content-item-title"><i class="fa fa-book"></i></div>
+                            <div class="content-item-detail">
+                                <label for="bookId">书籍ID</label>
+                                <input type="text" name="bookId" id="bookId">
+                            </div>
+                            <button class="content-add-btn" id="bookId_save_btn">保存</button>
+                        </div>
+                        <div class="main-role-item content-add-item">
+                            <div class="content-item-title"><i class="fa fa-user"></i></div>
+                            <button class="role-btn" id="role_men">男一在右</button>
+                            <button class="role-btn role-main" id="role_women">女一在右</button>
+                        </div>
+                        <div class="aside-add-item content-add-item">
+                            <div class="content-item-title"><i class="fa fa-commenting"></i></div>
+                            <div class="content-item-detail">
+                                <label for="asideContent">旁白内容</label>
+                                <input type="text" name="asideContent" id="asideContent">
+                            </div>
+                            <button class="content-add-btn" id="add_aside_btn">添加旁白</button>
+                        </div>
+                        <div class="dialogue-add-item content-add-item">
+                            <div class="content-item-title"><i class="fa fa-comments"></i></div>
+                            <button class="source-btn" data-target=".content-character-box">角色素材</button>
+                            <div class="content-item-detail">
+                                <label for="characterName">角色名字</label>
+                                <input type="text" name="characterName" id="characterName">
+                            </div>
+                            <div class="content-item-detail">
+                                <label for="characterLevel">角色地位</label>
+                                <select name="characterLevel" id="characterLevel">
+                                    <option value="b1">男一</option>
+                                    <option value="b2">男二</option>
+                                    <option value="g1">女一</option>
+                                    <option value="g2">女二</option>
+                                    <option value="" selected="selected">路人</option>
+                                </select>
+                            </div>
+                            <div class="content-item-detail">
+                                <label for="characterPhoto">头像路径</label>
+                                <input type="text" value="" name="characterPhoto" id="characterPhoto">
+                            </div>
+                            <div class="content-item-detail">
+                                <label for="characterDialog">角色对话</label>
+                                <input type="text" value="" name="characterDialog" id="characterDialog">
+                            </div>
+                            <button class="content-add-btn" id="add_dialogue_btn">添加对话</button>
+                        </div>
+                        <div class="image-add-item content-add-item">
+                            <div class="content-item-title"><i class="fa fa-picture-o"></i></div>
+                            <button class="source-btn" data-target=".content-image-box">图片素材</button>
+                            <div class="content-item-detail">
+                                <label for="imageSrc">图片路径</label>
+                                <input type="text" name="imageSrc" id="imageSrc">
+                            </div>
+                            <button class="content-add-btn" id="add_image_btn">添加图片</button>
+                        </div>
+                        <div class="music-add-item content-add-item">
+                            <div class="content-item-title"><i class="fa fa-volume-up"></i></div>
+                            <button class="source-btn" data-target=".content-music-box">音效素材</button>
+                            <div class="content-item-detail">
+                                <label for="musicName">音效名称</label>
+                                <input type="text" name="musicName" id="musicName">
+                            </div>
+                            <div class="content-item-detail">
+                                <label for="musicSrc">音效路径</label>
+                                <input type="text" name="musicSrc" id="musicSrc">
+                            </div>
+                            <button class="content-add-btn" id="add_music_btn">添加音效</button>
+                        </div>
+                        <div class="json-add-item content-add-item">
+                            <div class="content-item-title"><i class="fa fa-upload"></i></div>
+                            <div class="content-item-detail">
+                                <label for="bookData">书籍数据</label>
+                                <textarea id="bookData" rows="3"></textarea>
+                            </div>
+                            <button class="content-add-btn" id="book_import_btn">快速导入</button>
+                            <button class="content-add-btn" id="book_clear_btn">清空内容</button>
+                        </div>
+                        <div class="chuman-add-item content-add-item">
+                            <div class="content-item-title"><i class="fa fa-picture-o"></i></div>
+                            <div class="content-item-detail">
+                                <label for="imageSrc">触漫id号</label>
+                                <input type="text" name="chumanId" id="chumanId">
+                            </div>
+                            <button class="content-add-btn" id="add_chuman_btn">导入触漫数据</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 素材管理 -->
+                <div class="source-manage-box">
+                    <div class="source-title"><i class="fa fa-user"></i><i class="fa fa-music"></i><i class="fa fa-picture-o"></i></div>
+                    <div class="source-character-box source-box">
+                        <!-- <div class="source-character-item source-item">
+                            <div class="source-name">图片示例</div>
+                            <img class="source-icon" src="0" onerror="sourceCtrl.imgOnError(this)"/>
+                            <div class="source-operation">
+                                <button class="source-edit">编辑</button>
+                                <button class="source-delete">删除</button>
+                            </div>
+                        </div> -->
+
+                    </div>
+                    <div class="source-music-box source-box">
+                        <!-- <div class="source-music-item source-item">
+                            <audio preload="auto" class="hidden">
+                                <source src="http://211.140.7.173:8081/t/lyf/cry.mp3" type="audio/mpeg" onerror="sourceCtrl.musicOnError(this)">
+                            </audio>
+                            <div class="source-name">音频示例</div>
+                            <i class="source-icon fa fa-volume-off"></i>
+                            <div class="source-operation">
+                                <button class="source-edit">编辑</button>
+                                <button class="source-delete">删除</button>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="source-image-box source-box">
+                       <!-- <div class="source-image-item source-item">
+                            <div class="source-name">图片示例</div>
+                            <img class="source-icon" src="0" onerror="sourceCtrl.imgOnError(this)"/>
+                            <div class="source-operation">
+                                <button class="source-edit">编辑</button>
+                                <button class="source-delete">删除</button>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="source-edit-item" id="edit_character">
+                        <input type="text" name="source_type" value="character" class="hidden">
+                        <div class="item-type"><i class="fa fa-user"></i></div>
+                        <div class="source-detail">
+                            <div class="detail-item">
+                                <label for="edit_character_name">角色名字</label>
+                                <input type="text" value="" name="characterName" id="edit_character_name">
+                            </div>
+                            <div class="detail-item">
+                                <label for="edit_character_level">角色地位</label>
+                                <select name="character_level" id="edit_character_level">
+                                    <option value="b1">男一</option>
+                                    <option value="b2">男二</option>
+                                    <option value="g1">女一</option>
+                                    <option value="g2">女二</option>
+                                    <option value="" selected="selected">路人</option>
+                                </select>
+                            </div>
+                            <div class="detail-item">
+                                <label for="edit_character_photo">头像路径</label>
+                                <input type="text" value="" name="character_photo" id="edit_character_photo">
+                            </div>
+                            <button class="add-btn">确认修改</button>
+                        </div>
+                    </div>
+                    <div class="source-edit-item" id="edit_music">
+                        <input type="text" name="source_type" value="music" class="hidden">
+                        <div class="item-type"><i class="fa fa-music"></i></div>
+                        <div class="source-detail">
+                            <div class="detail-item">
+                                <label for="edit_music_name">音效名称</label>
+                                <input type="text" value="" name="music_name" id="edit_music_name">
+                            </div>
+                            <div class="detail-item">
+                                <label for="edit_music_src">音效路径</label>
+                                <input type="text" value="" name="music_src" id="edit_music_src">
+                            </div>
+                            <button class="add-btn">确认修改</button>
+                        </div>
+                    </div>
+                    <div class="source-edit-item" id="edit_image">
+                        <input type="text" name="source_type" value="image" class="hidden">
+                        <div class="item-type"><i class="fa fa-picture-o"></i></div>
+                        <div class="source-detail">
+                            <div class="detail-item">
+                                <label for="edit_image_name">图片名称</label>
+                                <input type="text" value="" name="image_name" id="edit_image_name">
+                            </div>
+                            <div class="detail-item">
+                                <label for="edit_image_src">图片路径</label>
+                                <input type="text" value="" name="image_src" id="edit_image_src">
+                            </div>
+                            <button class="add-btn">确认修改</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 页面编辑 -->
+        <div class="edit-container box">
+            <i class="fa fa-angle-double-right" id="refresh_novel"></i>
+            <div class="edit-box">
+                <div class="insert-line"><div></div></div>
+                <!-- <div class="aside-item edit-item">
+                    <i class="fa fa-commenting"></i>
+                    <button class="item-delete-btn">×</button>
+                    <textarea rows="3" name="aside_text"></textarea>
+                </div>
+
+                <div class="insert-line"><div></div></div>
+
+                <div class="dialog-item edit-item">
+                    <i class="fa fa-comments"></i>
+                    <button class="item-delete-btn">×</button>
+                    <div class="item-detail">
+                        <div class="detail-title">名字</div>
+                        <input type="text" class="detail-content" name="character_name">
+                    </div>
+                    <div class="item-detail">
+                        <div class="detail-title">地位</div>
+                        <select class="detail-content" name="character_level">
+                            <option value="b1">男一</option>
+                            <option value="g1">女一</option>
+                            <option value="b2">男二</option>
+                            <option value="g2">女二</option>
+                            <option value="">路人</option>
+                        </select>
+                    </div>
+                    <div class="item-detail">
+                        <div class="detail-title">头像</div>
+                        <input type="text" class="detail-content" name="character_photo">
+                    </div>
+                    <div class="item-detail">
+                        <div class="detail-title">对话</div>
+                        <textarea name="" rows="2" class="detail-content" name="character_dialog"></textarea>
+                    </div>
+                </div>
+
+                <div class="insert-line"><div></div></div>
+
+                <div class="image-item edit-item">
+                    <i class="fa fa-picture-o"></i>
+                    <button class="item-delete-btn">×</button>
+                    <div class="item-detail">
+                        <div class="detail-title">图片路径</div>
+                        <input type="text" class="detail-content" name="image_src">
+                    </div>
+                </div>
+
+                <div class="insert-line"><div></div></div>
+
+                <div class="music-item edit-item">
+                    <i class="fa fa-volume-up"></i>
+                    <button class="item-delete-btn">×</button>
+                    <div class="item-detail">
+                        <div class="detail-title">音效名称</div>
+                        <input type="text" class="detail-content" name="music_name">
+                    </div>
+                    <div class="item-detail">
+                        <div class="detail-title">音效路径</div>
+                        <input type="text" class="detail-content" name="music_src">
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+        <!-- 小说预览 -->
+        <div class="preview-container box">
+            <div class="preview-mobile">
+                <section class="cmr-dalog-warpbg" style="background: url(${d_bigCover}) no-repeat #EDECEC;background-size: 100% auto;">
+                    <div class="cmr-dalog-bookDetial">
+                        <!-- <div class="cmr-dalog-bkDetial-tt">片名：《${bookname}》<span class="cmr-dalog-bkDetial-time">${util.getTime("yyyy / MM / dd")}</span></div> -->
+                        <div class="cmr-dalog-bkDetial-tt">片名：《测试用例》<span class="cmr-dalog-bkDetial-time">2017-09-09</span></div>
+                        <div class="cmr-dalog-bkDetial-author">
+                            <p>类型：少女、生活、恋爱、都市<span class="cmr-dalog-bkDetial-right">出品：咪咕数媒</span></p>
+                            <p>作者：${author}</p>
+                        </div>
+                        <div class="cmr-dalog-bkDetial-intr">
+                            简介：${desc}
+                        </div>
+                        <div class="cmr-dalog-bookPlay"><i></i></div>
+                    </div>
+                    <div class="cmr-dalog-miguLogo"><i class="cmr-icon cmr-migu-icon"></i></div>
+                </section>
+                <section class="cmr-dalog-contentBox" id="cmr-dalog">
+                    <div id="contents" class="cmr-dalog-content">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cmr-dalog-contrlBox">
+                        <div class="cmr-dalog-contrl"><i class="cmr-dalog-contrlIcon">&nbsp;</i></div>
+                        <div class="cmr-dalog-contrlTxt" style="display:none;">长按此处自动阅读</div>
+                    </div>
+                    <div class="cmr-dalog-bkName">咪咕独家《${bookname}》</div>
+                    <div class="cmr-dalog-progress"><span></span></div>
+                </section>
+                <section class="cmr-dalog-lastPage">
+                    <div class="cmr-dalog-bkCover"><img src="${coverLogo}">
+                        <div style="line-height: 0;"><img src="http://wap.cmread.com/rbc/p/content/repository/ues/image/s109/bookshadow.png"></div>
+                    </div>
+                    <div class="cmr-dalog-lastPagebkm">《${bookname}》</div>
+                    <div class="cmr-dalog-lastPagebkAuthor">${author} 著</div>
+                    <a class="cmr-dalog-btmDetial" href="${bookUrl}">还没看够</a>
+                    <a class="cmr-dalog-btmShare" href="javascript:shareHD();"><i>&nbsp;</i>分享得书券</a>
+                    <div class="cmr-dalog-mgbigLogo"><img src="http://wap.cmread.com/rbc/p/content/repository/ues/image/s109/LOGO.png"></div>
+                </section>
+                <div class="pop-sq">
+                    <div class="pop-sqCon"> <img src="http://wap.cmread.com/rbc/p/content/repository/ues/image/s109/getsq.png">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="result-box"><textarea id="result_data"></textarea><div class="textarea-split-box"></div><div class="result-notify result-notify-hide">当前字符数量为<span class="result-length">12345</span>，需拆分为<span class="split-num">2</span>段。<button id="split_btn">点击拆分</button><button id="merge_btn">恢复合并</button></div></div>
+    </div>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/swiper-3.4.2.jquery.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
